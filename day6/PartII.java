@@ -155,3 +155,19 @@ public class PartII {
         return cnt;
     }
 }
+
+class PositionGuard {
+    int row;
+    int col;
+    int curState;
+
+    PositionGuard(int row, int col, int curState) {
+        this.row = row;
+        this.col = col;
+        this.curState = curState;
+    }
+
+    public String toString() {
+        return "row: " + row + ", col: " + col + ", cur: " + curState;
+    }
+}
