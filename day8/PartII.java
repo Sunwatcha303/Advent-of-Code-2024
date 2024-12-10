@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class PartII {
@@ -154,5 +155,32 @@ public class PartII {
             }
         }
         return cnt;
+    }
+}
+
+class Tile {
+    int row;
+    int col;
+
+    Tile(int i, int j) {
+        row = i;
+        col = j;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Tile tile = (Tile) obj;
+        return row == tile.row && col == tile.col;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(row, col);
+    }
+
+    public String toString() {
+        return "row: " + row + ", col: " + col;
     }
 }
