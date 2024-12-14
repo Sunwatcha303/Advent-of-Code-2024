@@ -71,17 +71,4 @@ public class PartI {
         }
         return sum;
     }
-
-    public static long gcd(long a, long b) {
-        while (b != 0) {
-            long temp = b;
-            b = a % b;
-            a = temp;
-        }
-        return a;
-    }
-
-    public static long lcm(long a, long b) {
-        return Math.abs(a * b) / gcd(a, b);
-    }
 }
